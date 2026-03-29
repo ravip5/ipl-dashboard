@@ -1,5 +1,4 @@
 {
-
   "name": "ipl-dashboard",
   "version": "0.1.0",
   "private": true,
@@ -8,7 +7,10 @@
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.2",
     "@testing-library/user-event": "^13.5.0",
+    "chart.js": "^4.5.1",
+    "chartjs-plugin-datalabels": "^2.2.0",
     "react": "^19.2.4",
+    "react-chartjs-2": "^5.3.1",
     "react-dom": "^19.2.4",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
@@ -17,7 +19,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -39,10 +43,6 @@
   },
   "devDependencies": {
     "gh-pages": "^6.3.0"
-  }
-  "homepage": "https://ravip5.github.io/ipl-dashboard",
-"scripts": {
-  "predeploy": "npm run build",
-  "deploy": "gh-pages -d build"
-}
+  },
+  "homepage": "https://ravip5.github.io/ipl-dashboard"
 }
