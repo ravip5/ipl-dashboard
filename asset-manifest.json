@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/ipl-dashboard/static/css/main.e6c13ad2.css",
-    "main.js": "/ipl-dashboard/static/js/main.fb7d9ef5.js",
+    "main.css": "/ipl-dashboard/static/css/main.39e6f0de.css",
+    "main.js": "/ipl-dashboard/static/js/main.96c217a2.js",
     "static/js/453.d546c9d0.chunk.js": "/ipl-dashboard/static/js/453.d546c9d0.chunk.js",
     "index.html": "/ipl-dashboard/index.html",
-    "main.e6c13ad2.css.map": "/ipl-dashboard/static/css/main.e6c13ad2.css.map",
-    "main.fb7d9ef5.js.map": "/ipl-dashboard/static/js/main.fb7d9ef5.js.map",
+    "main.39e6f0de.css.map": "/ipl-dashboard/static/css/main.39e6f0de.css.map",
+    "main.96c217a2.js.map": "/ipl-dashboard/static/js/main.96c217a2.js.map",
     "453.d546c9d0.chunk.js.map": "/ipl-dashboard/static/js/453.d546c9d0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e6c13ad2.css",
-    "static/js/main.fb7d9ef5.js"
+    "static/css/main.39e6f0de.css",
+    "static/js/main.96c217a2.js"
   ]
 }
