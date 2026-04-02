@@ -46,8 +46,8 @@ function App() {
   )}`;
 
   const allowedTeams = [
-    "Lavin","Avi","Raj","Hunny","Dinu","Punjabi",
-    "RK","Nicky","Jitin","Soham","Ashi","Kishu","Roshan"
+    "lavin","avi","raj","hunny","dinu","punjabi",
+    "rk","nicky","jitin","soham","ashi","kishu","roshan"
   ];
 
   const fetchData = () => {
@@ -59,17 +59,20 @@ function App() {
           const json = JSON.parse(jsonStr);
 
           const rows = json.table.rows.map((row) => ({
-            team: row.c[0]?.v,
+            team: row.c[0]?.v ? row.c[0].v.trim() : null,
             points: Number(row.c[1]?.v) || 0
           }));
 
           const filtered = rows.filter(
-            (r) => r.team && allowedTeams.includes(r.team)
+            (r) =>
+              r.team &&
+              allowedTeams.includes(r.team.trim().toLowerCase())
           );
 
           const teamMap = {};
           filtered.forEach((r) => {
-            teamMap[r.team] = (teamMap[r.team] || 0) + r.points;
+            const normalized = r.team.trim();
+            teamMap[normalized] = (teamMap[normalized] || 0) + r.points;
           });
 
           const cleanRows = Object.entries(teamMap).map(([team, points]) => ({
@@ -121,7 +124,17 @@ function App() {
         formatter: (value) => value
       }
     },
-    scales: { y: { beginAtZero: true } }
+    scales: {
+      x: {
+        ticks: {
+          autoSkip: false,
+          maxRotation: 45,   // ✅ rotate labels diagonally
+          minRotation: 45,
+          font: { size: 12 }
+        }
+      },
+      y: { beginAtZero: true }
+    }
   };
 
   return (
